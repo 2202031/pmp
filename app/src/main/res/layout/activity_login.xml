@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F0EC">
+
+    <!-- Header institucional -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="#00512F"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CFE"
+            android:textColor="#FFFFFF"
+            android:textSize="44sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="75dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#E30613" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="PMP Front"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="3dp"
+            android:text="Sistema institucional de monitoreo y gestión operativa."
+            android:textColor="#D1FAE5"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <!-- Card principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/bg_login_glass"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textColor="#1F2937"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Inicia sesión para acceder al sistema"
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+
+        <!-- Usuario -->
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_input_login"
+            android:hint="Usuario"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#4F6B5D"
+            android:textColorHint="#6E8B7E" />
+
+        <!-- Contraseña -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_login"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#4F6B5D"
+            android:textColorHint="#6E8B7E" />
+
+        <!-- Botón -->
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_button_login"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Iniciar sesión"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Línea -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="26dp"
+            android:background="#E2E8F0" />
+
+        <!-- Datos demo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Usuario: admin   |   Contraseña: 1234"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:text="PMP CFE • Prototipo visual institucional"
+        android:textColor="#64748B"
+        android:textSize="13sp" />
+
+</FrameLayout>
