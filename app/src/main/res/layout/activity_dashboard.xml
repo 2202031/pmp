@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="PMP CFE"
+            android:text="SUPERVISIONES"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Panel administrativo PMP CFE"
+                    android:text="Panel administrativo supervisiones"
                     android:textColor="#6B7280"
                     android:textSize="14sp" />
 
@@ -229,7 +229,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:lineSpacingExtra="4dp"
-                android:text="Sistema institucional en fase de prototipo visual para gestión PMP CFE."
+                android:text="Sistema institucional en fase de prototipo visual para gestión de supervisiones."
                 android:textColor="#6B7280"
                 android:textSize="14sp" />
 

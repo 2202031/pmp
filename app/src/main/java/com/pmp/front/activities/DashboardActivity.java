@@ -42,6 +42,11 @@ public class DashboardActivity extends Activity {
         txtUbicacion = findViewById(R.id.txtUbicacion);
         txtPerfil = findViewById(R.id.txtPerfil);
 
+        txtReportes.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, ReportFormActivity.class);
+            startActivity(intent);
+        });
+
         btnLogout = findViewById(R.id.btnLogout);
 
         btnToggleSidebar.setOnClickListener(v -> toggleSidebar());
