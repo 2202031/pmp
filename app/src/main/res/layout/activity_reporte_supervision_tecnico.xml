@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F0EC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingTop="38dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="32dp">
+
+        <!-- Encabezado -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:background="@drawable/bg_dashboard_header"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/btnVolver"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Supervisión de Cortes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Reporte del Técnico"
+                    android:textColor="#D1FAE5"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <!-- Resumen del reporte -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_dashboard_banner"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtFolioReporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUP-000"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCircuitoReporte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Circuito • Fecha"
+                android:textColor="#D1FAE5"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtEstadoFormulario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_input_login"
+                android:paddingStart="13dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="7dp"
+                android:text="Reporte: En proceso"
+                android:textColor="#006341"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtUltimoGuardado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="Sin avances guardados"
+                android:textColor="#D1FAE5"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Observaciones del Supervisor -->
+
+        <LinearLayout
+            android:id="@+id/panelObservacionesSupervisor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_green"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observaciones del Supervisor"
+                android:textColor="#B91C1C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Corrige el reporte o reemplaza las evidencias indicadas antes de reenviar."
+                android:textColor="#6B7280"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/txtObservacionesSupervisor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Observaciones de revisión"
+                android:textColor="#374151"
+                android:textIsSelectable="true"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Información de la notificación -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_green"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Información de la notificación"
+                android:textColor="#111827"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Número y año de notificación"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNumeroNotificacion"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ejemplo: 286-2024"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="KWh"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etKwh"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ejemplo: 11445"
+                android:inputType="numberDecimal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Importe"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etImporte"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ejemplo: 43189.00"
+                android:inputType="numberDecimal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="RPU de notificación"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etRpu"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ingresa el RPU"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Número de orden de corte"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etOrdenCorte"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ejemplo: W0105118209"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Tarifa"
+                android:textColor="#374151"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etTarifa"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input_login"
+                android:hint="Ejemplo: OM"
+                android:inputType="textCapCharacters"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Estatus del servicio -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_green"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estatus del servicio"
+                android:textColor="#111827"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Selecciona una opción."
+                android:textColor="#6B7280"
+                android:textSize="11sp" />
+
+            <RadioGroup
+                android:id="@+id/rgStatusServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbConEnergia"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="Con energía"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbCortado"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="Cortado"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbDesmantelado"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="Desmantelado"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbOtroServicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="Otro servicio"
+                    android:textColor="#374151" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Datos del corte -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_green"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos del corte"
+                android:textColor="#111827"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Selecciona el punto donde se realizó el corte."
+                android:textColor="#6B7280"
+                android:textSize="11sp" />
+
+            <RadioGroup
+                android:id="@+id/rgDatosCorte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbDePoste"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="De poste"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbDeRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="De red"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbDeRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="De registro"
+                    android:textColor="#374151" />
+
+                <RadioButton
+                    android:id="@+id/rbDeBase"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:buttonTint="#006341"
+                    android:text="De base"
+                    android:textColor="#374151" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!-- Evidencias fotográficas -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_green"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Evidencias fotográficas"
+                android:textColor="#111827"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCantidadEvidencias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="0 de 4 evidencias registradas"
+                android:textColor="#6B7280"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnAbrirEvidencias"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_input_login"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Capturar evidencias"
+                android:textColor="#006341"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Botón guardar avance -->
+
+        <TextView
+            android:id="@+id/btnGuardarAvance"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_input_login"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Guardar avance"
+            android:textColor="#006341"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Botón enviar a revisión -->
+
+        <TextView
+            android:id="@+id/btnEnviarRevision"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_button_login"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Enviar a revisión"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="El reporte y las evidencias podrán modificarse mientras no hayan sido enviados a revisión."
+            android:textColor="#6B7280"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</ScrollView>

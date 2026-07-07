@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F0EC">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="38dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="18dp">
+
+            <!-- Encabezado -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:background="@drawable/bg_dashboard_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <ImageButton
+                    android:id="@+id/btnOpenSidebar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Abrir menú"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="Dashboard Supervisor"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Supervisiones"
+                    android:textColor="#D1FAE5"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Banner -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_dashboard_banner"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/bg_input_login"
+                    android:gravity="center"
+                    android:text="⚡"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Asignación, checklist, revisión y validación de supervisiones"
+                    android:textColor="#D1FAE5"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Nueva supervisión -->
+
+            <TextView
+                android:id="@+id/btnNuevaSupervision"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_button_login"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="+   Asignar supervisión"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Módulos del supervisor"
+                android:textColor="#111827"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <!-- Primera fila -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <!-- Supervisiones -->
+
+                <LinearLayout
+                    android:id="@+id/cardReportes"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_green"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_input_login"
+                        android:gravity="center"
+                        android:text="▣"
+                        android:textColor="#006341"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Supervisiones"
+                        android:textColor="#111827"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCantidadSupervisiones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 registradas"
+                        android:textColor="#4F6B5D"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Personal -->
+
+                <LinearLayout
+                    android:id="@+id/cardPersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_green"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_input_login"
+                        android:gravity="center"
+                        android:text="♙"
+                        android:textColor="#006341"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Personal operativo"
+                        android:textColor="#111827"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCantidadPersonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 registros"
+                        android:textColor="#4F6B5D"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Segunda fila -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <!-- Reportes PDF -->
+
+                <LinearLayout
+                    android:id="@+id/cardVistaPdf"
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_blue"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_input_login"
+                        android:gravity="center"
+                        android:text="☷"
+                        android:textColor="#E30613"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Reportes PDF"
+                        android:textColor="#111827"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCantidadReportesPdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="0 disponibles · 0 generados"
+                        android:textColor="#4F6B5D"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <!-- Calendario -->
+
+                <LinearLayout
+                    android:id="@+id/cardCalendario"
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_blue"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_input_login"
+                        android:gravity="center"
+                        android:text="□"
+                        android:textColor="#006341"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Calendario"
+                        android:textColor="#111827"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCantidadCalendario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 pendientes"
+                        android:textColor="#4F6B5D"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Supervisión reciente -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Supervisión más reciente"
+                android:textColor="#111827"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/bg_card_green"
+                android:elevation="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/txtResumenRecienteTitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sin supervisiones registradas"
+                    android:textColor="#4F6B5D"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtResumenRecienteDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="3"
+                    android:text="Las supervisiones asignadas aparecerán aquí."
+                    android:textColor="#6B7280"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Fondo oscuro del sidebar -->
+
+    <View
+        android:id="@+id/sidebarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+    <!-- Sidebar -->
+
+    <FrameLayout
+        android:id="@+id/sidebar"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sidebar_drawer"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="-90dp"
+            android:alpha="0.14"
+            android:background="@drawable/bg_circle_soft" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="-70dp"
+            android:layout_marginTop="155dp"
+            android:alpha="0.16"
+            android:background="@drawable/bg_circle_soft" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Logo -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_input_login"
+                        android:gravity="center"
+                        android:text="⚡"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supervisiones"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supervisor"
+                            android:textColor="#A7C7B5"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnToggleSidebar"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Cerrar menú"
+                        android:src="@android:drawable/ic_menu_close_clear_cancel"
+                        android:tint="#CFE6D8" />
+
+                </LinearLayout>
+
+                <!-- Usuario -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/bg_sidebar_user"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_login_glass"
+                        android:gravity="center"
+                        android:text="SP"
+                        android:textColor="#006341"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="admin"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supervisor"
+                            android:textColor="#A7C7B5"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="MENÚ SUPERVISOR"
+                    android:textColor="#7FAE94"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <!-- Inicio -->
+
+                <TextView
+                    android:id="@+id/txtInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_sidebar_item_active"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="⌂   Inicio"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Personal operativo -->
+
+                <TextView
+                    android:id="@+id/txtPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="♙   Personal operativo"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Supervisiones -->
+
+                <TextView
+                    android:id="@+id/txtReportes"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="▣   Supervisiones"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Reportes PDF -->
+
+                <TextView
+                    android:id="@+id/txtPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="☷   Reportes PDF"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Calendario -->
+
+                <TextView
+                    android:id="@+id/txtUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="□   Calendario"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Notificaciones -->
+
+                <TextView
+                    android:id="@+id/txtNotificaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="◌   Notificaciones"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Perfil -->
+
+                <TextView
+                    android:id="@+id/txtMiPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="☻   Perfil"
+                    android:textColor="#A7C7B5"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Cerrar sesión -->
+
+                <TextView
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/bg_sidebar_logout"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:text="↪   Cerrar sesión"
+                    android:textColor="#FF6B6B"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</FrameLayout>

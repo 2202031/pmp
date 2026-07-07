@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -11,19 +13,107 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PMPFront">
-        <activity android:name=".activities.DashboardActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true">
 
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
 
         </activity>
-        <activity android:name=".activities.ReportFormActivity" />
+
+        <activity
+            android:name=".activities.NotificacionesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.MiPerfilActivity"
+            android:exported="false" />
+
+        <!-- Supervisor -->
+
+        <activity
+            android:name=".activities.supervisor.DashboardSupervisorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.PersonalOperativoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.RegistrarTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.AsignarSupervisionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.SupervisionesSupervisorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.ChecklistSeguridadActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.RevisionSupervisionSupervisorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.ReportePdfSupervisorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.supervisor.CalendarioSupervisorActivity"
+            android:exported="false" />
+
+        <!-- Técnico -->
+
+        <activity
+            android:name=".activities.tecnico.DashboardTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.tecnico.MisSupervisionesTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.tecnico.DetalleSupervisionTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.tecnico.ReporteSupervisionTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.tecnico.EvidenciasSupervisionTecnicoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.tecnico.CalendarioTecnicoActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
