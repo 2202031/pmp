@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F0F4F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CFE | Supervisiones"
+            android:textColor="#006341"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuración de servidor"
+            android:textColor="#374151"
+            android:textSize="15sp"
+            android:layout_marginBottom="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección del servidor (IP en la red WiFi)"
+            android:textColor="#111827"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etIpServidor"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input_login"
+            android:paddingHorizontal="16dp"
+            android:hint="Ej. 192.168.1.75"
+            android:textColorHint="#9CA3AF"
+            android:textColor="#111827"
+            android:inputType="text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puedes escribir solo la IP (se usará el puerto 8080) o la URL completa."
+            android:textColor="#6B7280"
+            android:textSize="11sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/btnAutodetectar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_input_login"
+            android:text="Detectar servidor automáticamente"
+            android:textColor="#006341"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="14dp" />
+
+        <TextView
+            android:id="@+id/txtEstadoDeteccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/btnGuardarServidor"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_button_login"
+            android:text="Guardar y continuar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+</ScrollView>
